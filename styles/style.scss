@@ -1,0 +1,36 @@
+$font-stack: Helvetica, sans-serif;
+
+
+@mixin resetStart {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+@mixin background-img-settings {
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+body {
+    @include resetStart();
+    font: $font-stack;
+}
+
+.jumbotron {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/7065/space-desk-office-hero-7065.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    @include background-img-settings();
+}
+
+#contact {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    @include background-img-settings();
+}
+
+#navigation, #about, #whatWeDo, #testimonials, #projects, .featurette, #team, #contact {
+    max-width: 100%;
+}
+
